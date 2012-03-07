@@ -6,7 +6,7 @@
 var fs = require('fs');
 var path = require('path');
 
-var pjs = require('./package.json');
+var pjs = JSON.parse(fs.readFileSync('./package.json'));
 
 var modules = fs.readdirSync('node_modules');
 
